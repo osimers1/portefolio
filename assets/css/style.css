@@ -179,7 +179,7 @@ html .card:hover > .title {
     left: 0% !important;
   }
   .card img {
-    width: 20% !important;
+    width: 100% !important;
     height: auto !important;
   }
 }
