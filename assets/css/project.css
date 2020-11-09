@@ -1,6 +1,8 @@
 * {
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 html {
@@ -73,73 +75,29 @@ html header a:hover {
 }
 
 html header .page {
+  text-decoration: none;
   color: black;
 }
 
-html .card {
-  margin-top: 2%;
-  position: absolute;
-  left: 33%;
-  border: solid 3px white;
-  overflow: hidden;
+html div.blockPlatforme {
+  border: solid 2px black;
+  border-radius: 10px;
+  margin: 10% 20% 0 20%;
 }
 
-html .card img {
-  width: 500px;
-  height: 600px;
-  -webkit-transition: -webkit-transform 1s;
-  transition: -webkit-transform 1s;
-  transition: transform 1s;
-  transition: transform 1s, -webkit-transform 1s;
+html div.blockPlatforme h1 {
+  text-align: center;
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
 
-html .card .title {
-  font-family: sans-serif;
-  position: absolute;
-  bottom: 0;
-  -webkit-transition: bottom 1s;
-  transition: bottom 1s;
-  background-color: grey;
-  width: 100%;
-  font-family: pacifico;
-}
-
-html .card .title h1 {
+html div.blockPlatforme h1 a {
+  text-decoration: none;
   color: black;
 }
 
-html .card .title h3 {
+html div.blockPlatforme h1 i {
   color: black;
-}
-
-html .card .text {
-  position: absolute;
-  font-family: sans-serif;
-  bottom: 0%;
-  height: 0%;
-  color: white;
-  width: 90%;
-  background-color: black;
-  overflow: hidden;
-  -webkit-transition: height 1s;
-  transition: height 1s;
-  font-family: pacifico;
-  padding-left: 5%;
-  padding-right: 5%;
-}
-
-html .card:hover > .text {
-  height: 25%;
-}
-
-html .card:hover > img {
-  -webkit-transform: scale(1.5);
-          transform: scale(1.5);
-  opacity: 0.6;
-}
-
-html .card:hover > .title {
-  bottom: 25%;
 }
 
 @media screen and (max-width: 700px) {
@@ -168,19 +126,6 @@ html .card:hover > .title {
     padding-right: 9% !important;
     margin-bottom: 2%;
     border-radius: 0px !important;
-  }
-  .card {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    left: 0% !important;
-  }
-  .card img {
-    width: 20% !important;
-    height: auto !important;
   }
 }
 

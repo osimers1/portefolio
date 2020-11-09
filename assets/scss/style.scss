@@ -1,0 +1,177 @@
+*{
+    margin: 0;
+    padding: 0;
+    // box-sizing: border-box; 
+    
+}
+
+html{
+    margin: 0;
+    padding: 0;
+    background: rgb(99,98,98);
+    background: linear-gradient(90deg, rgba(99,98,98,1) 45%, rgba(0,0,0,1) 100%);
+    color: white;
+    
+    header{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        background-color: rgb(58, 58, 58);
+        p.nameFenetre{
+            margin-right: 35rem;
+            font-family: pacifico;
+            font-size: 30px;
+        }
+
+        p.nameGsm{
+            display: none;
+        }
+        .menu{
+            display: flex;
+            justify-content: center;
+        }
+        
+        a{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            text-decoration: none;
+            color: white;
+            text-align: center;
+            // border: 1px solid black;
+            padding-left: 4rem;
+            padding-right: 4rem;
+            background: rgb(0,0,0);
+            background: linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(120,118,118,1) 50%, rgba(0,0,0,1) 100%);
+            border: 2.5px solid rgb(120,118,118);
+            font-family: pacifico;
+            &:hover{
+                animation: extend 2s infinite;
+            }
+        }
+        .page{
+            color: rgba(0,0,0,1);
+        }
+    }
+    .card{
+        margin-top: 2% ;
+        position: absolute;
+        left: 33%;
+        border: solid 3px white;
+        overflow: hidden; //permet de cacher les bord depassant de l'image 
+        img{
+    
+            width: 500px;
+            height: 600px;
+            transition: transform 1s;
+        }
+        .title{
+            font-family: sans-serif;
+            position: absolute;
+            bottom: 0;
+            transition: bottom 1s;
+            background-color: grey;
+            width: 100%;
+            font-family: pacifico;
+            h1{
+                color: black;
+            }
+            h3{
+                color: black;
+            }
+        }
+        .text{
+            position: absolute;
+            font-family: sans-serif;
+            bottom: 0%;
+            height: 0%;
+            color: white;
+            width: 90%;
+            background-color: black;
+            overflow: hidden;
+            transition: height 1s;
+            font-family: pacifico;
+            padding: {
+                left: 5%;
+                right: 5%;
+            }
+        }
+        
+        &:hover{
+            & > .text{
+                height: 25%;
+            }
+            & > img{
+                transform: scale(1.5);
+                opacity: 0.6;
+            }
+            & > .title{
+                bottom: 25%;
+            }
+        }
+        // .comment{
+        //     display: flex;
+        //     flex-direction: row;
+        //     justify-content: center;
+        //     position: absolute;
+        //     bottom: -70%;
+        // }
+    }
+    
+    
+}
+
+
+@media screen and (max-width: 700px)
+{
+    p.nameFenetre{
+        display: none!important;
+    }
+    p.nameGsm{
+        display: flex!important;
+        background-color: grey;
+        justify-content: center;
+        font-family: pacifico;
+        font-size: large;
+    }
+    header{
+        flex-direction: column!important;
+    }
+    a{
+        padding-left: 9%!important;
+        padding-right: 9%!important;
+        margin-bottom: 2%;
+        border-radius: 0px!important;
+    }
+    .card{
+        display: flex;
+        justify-content: center;
+        left: 0%!important;
+        img{
+            width: 20%!important;
+            height: auto!important;
+        }
+    }
+}
+
+@font-face {
+    font-family: "Chilanka";
+    src: url("/assets/font/Chilanka/Chilanka-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Pacifico";
+    src: url("/assets/font/Pacifico/Pacifico-Regular.ttf") format("truetype");
+}
+
+@keyframes extend{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.5);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
